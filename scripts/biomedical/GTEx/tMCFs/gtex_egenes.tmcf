@@ -1,0 +1,65 @@
+Node: E:egenes->E1
+typeOf: dcs:GenomicCoordinates
+dcid: C:egenes->dcid_gene_coordinates
+name: C:egenes->name_gene_coordinates
+chrom: C:egenes->gene_chr
+chromEnd: C:egenes->gene_end
+chromStart: C:egenes->gene_start
+ensemblVersion: C:egenes->gene_id
+inGenomeAssembly: "GRCh38.p13"
+strandOrientation: C:egenes->strand
+
+Node:E:egenes->E2
+typeOf: dcs:Gene
+dcid: C:egenes->dcid_gene
+name: C:egenes->symbol
+ensemblID: C:egenes->ensembl_id
+geneticVariantCount: C:egenes->num_var
+hgncID: C:egenes->hgnc_id
+synonym: C:egenes->alternate_name
+typeOfGene: C:egenes->biotype
+
+Node: E:egenes->E3
+typeOf: dcs:GenomicPosition
+dcid: C:egenes->dcid_variant_pos
+name: C:egenes->name_variant_pos
+chrom: C:egenes->chr
+inGenomeAssembly: "GRCh38.p13"
+position: C:egenes->variant_pos
+
+Node:E:egenes->E4
+typeOf: dcs:GeneticVariant
+dcid: C:egenes->dcid_variant
+name: C:egenes->rs_id_dbSNP155_GRCh38p13
+alternativeAllele: C:egenes->alt
+gtexVariantId: C:egenes->variant_id
+hasGenomicPosition: E:egenes->E3
+numberOfAlternativeAlleles: C:egenes->num_alt_per_site
+rsID: C:egenes->rs_id_dbSNP155_GRCh38p13
+referenceAllele: C:egenes->ref
+
+Node: E:egenes->E5
+typeOf: dcs:GeneGeneticVariantAssociation
+dcid: C:egenes->dcid
+name: C:egenes->name
+betaDistributionShape1: C:egenes->beta_shape1
+betaDistributionShape2: C:egenes->beta_shape2
+ensemblVersion: C:egenes->gene_id
+geneID: E:egenes->E2
+hg38DistanceFromTranscriptionStartSite: C:egenes->tss_distance
+log2AllelicFoldChange: C:egenes->afc
+log2AllelicFoldChangeStandardError: C:egenes->afc_se
+minorAlleleCount: C:egenes->ma_count
+minorAlleleSampleNumber: C:egenes->ma_samples
+pValueBeta: C:egenes->pval_beta
+pValuePermutation: C:egenes->pval_perm
+pValueNominal: C:egenes->pval_nominal
+pValueNominalThreshold: C:egenes->pval_nominal_threshold
+pValueTrueDegreesOfFreedom: C:egenes->pval_true_df
+qValue: C:egenes->qval
+sampleAlternativeAlleleFrequency: C:egenes->af
+slope: C:egenes->slope
+slopeStandardError: C:egenes->slope_se
+tissue: C:egenes->Tissue
+trueDegreesOfFreedom: C:egenes->true_df
+variantID: E:egenes->E4

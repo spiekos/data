@@ -1,0 +1,31 @@
+Node:E:sig_pairs->E1
+typeOf: dcs:Gene
+dcid: C:sig_pairs->dcid_gene
+name: C:sig_pairs->symbol
+ensemblID: C:sig_pairs->ensembl_id
+
+Node:E:sig_pairs->E2
+typeOf: dcs:GeneticVariant
+dcid: C:sig_pairs->dcid_variant
+name: C:sig_pairs->rsID
+gtexVariantId: C:sig_pairs->variant_id
+rsID: C:sig_pairs->rsID
+
+Node: E:sig_pairs->E3
+typeOf: dcs:GeneGeneticVariantAssociation
+dcid: C:sig_pairs->dcid
+name: C:sig_pairs->name
+ensemblVersion: C:sig_pairs->gene_id
+geneID: E:sig_pairs->E1
+hg38DistanceFromTranscriptionStartSite: C:sig_pairs->tss_distance
+minimalPValueNominal: C:sig_pairs->min_pval_nominal
+minorAlleleCount: C:sig_pairs->ma_count
+minorAlleleSampleNumber: C:sig_pairs->ma_samples
+pValueBeta: C:sig_pairs->pval_beta
+pValueNominal: C:sig_pairs->pval_nominal
+pValueNominalThreshold: C:sig_pairs->pval_nominal_threshold
+sampleAlternativeAlleleFrequency: C:sig_pairs->af
+slope: C:sig_pairs->slope
+slopeStandardError: C:sig_pairs->slope_se
+tissue: C:sig_pairs->Tissue
+variantID: E:sig_pairs->E2
